@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-toolbar>Criar carro para o usuario logado</mat-toolbar>
+  <mat-card-content>
+    <form [formGroup]="form" class="min-width">
+        <mat-form-field class="full-width">
+          <mat-label>Placa</mat-label>
+          <input matInput formControlName="licensePlate" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Ano</mat-label>
+          <input matInput formControlName="year" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Modelo</mat-label>
+          <input matInput formControlName="model" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Cor</mat-label>
+          <input matInput formControlName="color" />
+        </mat-form-field>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onCancel()">CANCELAR</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">SALVAR</button>
+  </mat-card-actions>
+</mat-card>
+
